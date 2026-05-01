@@ -1,0 +1,16 @@
+<h2>Schedule</h2>
+
+<form method="POST">
+    <input name="date" placeholder="YYYY-MM-DD" required>
+    <input name="time" placeholder="Time" required>
+    <input name="desc" placeholder="Description" required>
+    <button type="submit">Add</button>
+</form>
+
+<ul>
+{% for s in schedules %}
+    <li>{{ s.sched_date }} - {{ s.sched_time }} : {{ s.description }}</li>
+{% endfor %}
+</ul>
+
+<a href="/dashboard">Back</a>

@@ -1,0 +1,24 @@
+<h2>Records</h2>
+
+<table border="1">
+<tr>
+    <th>Priest</th>
+    <th>Parish</th>
+    <th>Mass</th>
+    <th>Date</th>
+    <th>Action</th>
+</tr>
+
+{% for log in logs %}
+<tr>
+    <td>{{ log.priest_name }}</td>
+    <td>{{ log.parish_name }}</td>
+    <td>{{ log.mass_type }}</td>
+    <td>{{ log.log_date }}</td>
+    <td><a href="/delete/{{ log.id }}">Delete</a></td>
+</tr>
+{% endfor %}
+
+</table>
+
+<a href="/dashboard">Back</a>
